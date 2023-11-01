@@ -3,20 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//public class Difficulty : Settings
-//{
-//    public enum DifficultyType
-//    {
-
-//    }
-
-//    public DifficultyType GetDifficulty()
-//    {
-//        return (DifficultyType) GetValue();
-//    }
-//}
-
-
 public class Settings : ScriptableObject
 {
     [SerializeField] protected string title;
