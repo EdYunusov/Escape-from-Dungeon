@@ -41,8 +41,6 @@ public class BattelSystem : MonoBehaviour
 
         state = BattelState.Start;
         StartCoroutine(SetupBattle());
-
-
     }
 
     private void PlayerTurn()
