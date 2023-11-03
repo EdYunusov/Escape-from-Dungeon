@@ -24,6 +24,7 @@ public class BattelSystem : MonoBehaviour
     [SerializeField] private Transform playerSpawnGround;
     [SerializeField] private Transform enemySpawnGround;
 
+    [SerializeField] private GameObject battelScene;
 
     private Unit playerUnit;
     private Unit enemyUnit;
@@ -31,11 +32,17 @@ public class BattelSystem : MonoBehaviour
     public BattleGUI playerGUI;
     public BattleGUI enemyGUI;
 
+    private PlayerController playerController;
+
 
     private void Start()
     {
+        playerController = GetComponent<PlayerController>();
+
         state = BattelState.Start;
         StartCoroutine(SetupBattle());
+
+
     }
 
     private void PlayerTurn()
@@ -45,6 +52,8 @@ public class BattelSystem : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
+        playerController.enabled = false;
+
         GameObject playerGO = Instantiate(playerPrefab, playerSpawnGround);
         playerUnit = playerGO.GetComponent<Unit>();
 
@@ -157,7 +166,8 @@ public class BattelSystem : MonoBehaviour
     {
         if (state == BattelState.Won)
         {
-            //обновление инттерфейса и зачисление эксп (?)
+            battelScene.SetActive(false);
+            playerController.enabled = true;
         }
 
         if (state == BattelState.Lose)

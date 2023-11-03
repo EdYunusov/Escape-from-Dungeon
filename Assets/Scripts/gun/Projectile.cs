@@ -9,7 +9,6 @@ namespace Maze2Dgame
     {
 
         [SerializeField] private float speed;
-        [SerializeField] private int damage;
         [SerializeField] private float m_LifeTime;
  
         private Vector3 m_TargetPos;
@@ -19,7 +18,7 @@ namespace Maze2Dgame
 
         private void Start()
         {
-            m_TargetPos = FindObjectOfType<Character>().transform.position;
+            m_TargetPos = FindObjectOfType<PlayerController>().transform.position;
         }
 
         private void Update()
@@ -35,12 +34,9 @@ namespace Maze2Dgame
                 {
                     Destructible dist = hit.collider.transform.root.GetComponent<Destructible>();
                     if (dist != null)
-                    {
-                        //dist.ApplayDamage(damage);
-
+                    { 
                         WaitForSeconde();
-
-                        SceneManager.LoadScene("TestTurnBaseBattleScene");
+                        follow_AI.EnableBattleScene();
                     }
                     OnProjectileLifeTimeEnd(hit.collider, hit.point);
                 }
@@ -50,13 +46,6 @@ namespace Maze2Dgame
         private void OnProjectileLifeTimeEnd(Collider2D col, Vector2 pos)
         {
             Destroy(gameObject);
-        }
-
-        private Destructible m_Parent;
-
-        public void SetParentShoot(Destructible parent)
-        {
-            m_Parent = parent;
         }
 
         IEnumerator WaitForSeconde()

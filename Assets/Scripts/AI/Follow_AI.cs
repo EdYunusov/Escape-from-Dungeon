@@ -2,14 +2,13 @@ using Maze2Dgame;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 
 public class Follow_AI : MonoBehaviour
 {
     [SerializeField] private float m_Speed;
     [SerializeField] private Transform m_Target;
-    [SerializeField] private Episode selectedSceneLoaded;
     [SerializeField] private float m_MinDist;
     [SerializeField] private float m_ShootingRange;
     [SerializeField] private GameObject m_Projectile;
@@ -17,7 +16,10 @@ public class Follow_AI : MonoBehaviour
     [SerializeField] private float m_FireRate;
     [SerializeField] private float m_NextShotTime;
 
-    public Episode SelectedScene => selectedSceneLoaded;
+    [SerializeField] private GameObject battleScene;
+
+    public GameObject BattleScene => battleScene;
+
 
     private void Start()
     {
@@ -45,10 +47,9 @@ public class Follow_AI : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, m_ShootingRange);
     }
 
-    public void LevelSceneLoadet()
+    public void EnableBattleScene()
     {
-        Debug.Log(selectedSceneLoaded);
-        SceneManager.LoadScene(selectedSceneLoaded.ToString());
+        battleScene.SetActive(true);
     }
 
 }
