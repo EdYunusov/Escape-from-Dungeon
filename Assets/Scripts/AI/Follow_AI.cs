@@ -11,7 +11,7 @@ public class Follow_AI : MonoBehaviour
     [SerializeField] private Transform m_Target;
     [SerializeField] private float m_MinDist;
     [SerializeField] private float m_ShootingRange;
-    [SerializeField] private GameObject m_Projectile;
+    [SerializeField] private Projectile m_Projectile;
     [SerializeField] private GameObject m_ParentProjectile;
     [SerializeField] private float m_FireRate;
     [SerializeField] private float m_NextShotTime;
@@ -37,6 +37,7 @@ public class Follow_AI : MonoBehaviour
         {
             Instantiate(m_Projectile, m_ParentProjectile.transform.position, Quaternion.identity);
             m_NextShotTime = Time.time + m_FireRate;
+            m_Projectile.SetFollow_AI(this);
         }
     }
 

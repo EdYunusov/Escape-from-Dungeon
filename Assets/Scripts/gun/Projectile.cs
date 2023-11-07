@@ -52,6 +52,12 @@ namespace Maze2Dgame
         {
             yield return new WaitForSeconds(5f);
         }
+
+        public void SetFollow_AI(Follow_AI ai_object) 
+        {
+            follow_AI = ai_object;
+        }
+
     }
 }
 
