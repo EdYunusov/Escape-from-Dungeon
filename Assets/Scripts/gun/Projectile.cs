@@ -18,7 +18,6 @@ namespace Maze2Dgame
 
         private void Start()
         {
-            follow_AI = GetComponent<Follow_AI>();
             m_TargetPos = FindObjectOfType<PlayerController>().transform.position;
         }
 

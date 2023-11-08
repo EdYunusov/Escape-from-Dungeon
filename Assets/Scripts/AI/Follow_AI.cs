@@ -35,9 +35,9 @@ public class Follow_AI : MonoBehaviour
         }
         else if (distanceFromPlayer <= m_ShootingRange && m_NextShotTime < Time.time)
         {
-            Instantiate(m_Projectile, m_ParentProjectile.transform.position, Quaternion.identity);
+            Projectile currentProjectile = Instantiate(m_Projectile, m_ParentProjectile.transform.position, Quaternion.identity);
             m_NextShotTime = Time.time + m_FireRate;
-            m_Projectile.SetFollow_AI(this);
+            currentProjectile.SetFollow_AI(this);
         }
     }
 
