@@ -34835,10 +34835,6 @@ PrefabInstance:
       propertyPath: battleScene
       value: 
       objectReference: {fileID: 1142153379}
-    - target: {fileID: 6788557719463151070, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
-      propertyPath: m_Projectile
-      value: 
-      objectReference: {fileID: 7487342064825449798, guid: 9277af0e584ffbd4d86cf3bfbf227d56, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
 --- !u!1 &924174165
