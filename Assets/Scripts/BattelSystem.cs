@@ -37,8 +37,6 @@ public class BattelSystem : MonoBehaviour
 
     private void Start()
     {
-        playerController = GetComponent<PlayerController>();
-
         state = BattelState.Start;
         StartCoroutine(SetupBattle());
     }
@@ -50,8 +48,6 @@ public class BattelSystem : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
-        playerController.enabled = false;
-
         GameObject playerGO = Instantiate(playerPrefab, playerSpawnGround);
         playerUnit = playerGO.GetComponent<Unit>();
 
@@ -165,7 +161,6 @@ public class BattelSystem : MonoBehaviour
         if (state == BattelState.Won)
         {
             battelScene.SetActive(false);
-            playerController.enabled = true;
         }
 
         if (state == BattelState.Lose)

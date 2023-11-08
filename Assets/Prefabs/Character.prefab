@@ -175,8 +175,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nickname: Player
   maxHP: 100
-  currentHP: 50
-  physDamage: 15
+  currentHP: 100
+  physDamage: 20
   magicDamage: 20
   healingPower: 10
   m_EventOnDeath:

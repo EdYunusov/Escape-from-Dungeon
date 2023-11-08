@@ -149,6 +149,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
+    - target: {fileID: 8192006939620827602, guid: a942991688fd8c64bb619a82db3e237a, type: 3}
+      propertyPath: currentHP
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192006939620827602, guid: a942991688fd8c64bb619a82db3e237a, type: 3}
+      propertyPath: physDamage
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8697418185869824013, guid: a942991688fd8c64bb619a82db3e237a, type: 3}
       propertyPath: m_RootOrder
       value: 3
