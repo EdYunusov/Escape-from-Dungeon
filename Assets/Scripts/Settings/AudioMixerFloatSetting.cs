@@ -9,7 +9,6 @@ public class AudioMixerFloatSetting : Settings
     [SerializeField] private AudioMixer audioMixer;
     [SerializeField] private string namePrametr;
 
-
     [SerializeField] private float minRealValue;
     [SerializeField] private float maxRealValue;
 
