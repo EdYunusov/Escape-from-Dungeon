@@ -133,6 +133,16 @@ public class BattelSystem : MonoBehaviour
         StartCoroutine(EnemyAttack());
     }
 
+    IEnumerator PlayerRunAway()
+    {
+        Debug.Log("Player escape from battle!");
+
+        playerUnit.PlayerEscape();
+        playerGUI.SetHP(playerUnit.CurrentHP);
+
+        yield return new WaitForSeconds(2f);
+    }
+
     IEnumerator EnemyAttack()
     {
         Debug.Log("HP after attack" + playerUnit.CurrentHP);
@@ -196,4 +206,12 @@ public class BattelSystem : MonoBehaviour
 
         StartCoroutine(PlayerDefence());
     }
+
+    public void OnRunAway()
+    {
+        if (state != BattelState.PlayerTurn) return;
+
+        StartCoroutine(PlayerRunAway());
+    }
+
 }

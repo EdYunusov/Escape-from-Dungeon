@@ -13,6 +13,10 @@ public class Unit : MonoBehaviour
     [SerializeField] private int magicDamage;
     [SerializeField] private int healingPower;
 
+    [SerializeField] private GameObject battleScene;
+
+    public GameObject BattleScene => battleScene;
+
     private Rigidbody2D m_Rig;
     public bool isProtected { get; set; }
 
@@ -64,6 +68,11 @@ public class Unit : MonoBehaviour
     {
         if (isProtected) physDamage = dmg / 2;
         return physDamage;
+    }
+
+    public void PlayerEscape()
+    {
+        battleScene.SetActive(false);
     }
 
     [SerializeField] private UnityEvent m_EventOnDeath;

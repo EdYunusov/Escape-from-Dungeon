@@ -10,6 +10,8 @@ public class UISettingsButton : UIButtonSelectable, IScriptableObjectProperty
     [SerializeField] private Text valueText;
     [SerializeField] private Image previousImage;
     [SerializeField] private Image nextImage;
+    [SerializeField] private Slider slider;
+
 
     private void Start()
     {
@@ -26,6 +28,13 @@ public class UISettingsButton : UIButtonSelectable, IScriptableObjectProperty
     public void SetPreviousValueSettings()
     {
         settings?.SetPreviousValue();
+        settings.Apply();
+        UpdateInfo();
+    }
+
+    public void OnVolumeChange()
+    { 
+        settings?.OnVolumeChange();
         settings.Apply();
         UpdateInfo();
     }

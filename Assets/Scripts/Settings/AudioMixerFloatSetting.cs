@@ -31,6 +31,12 @@ public class AudioMixerFloatSetting : Settings
         AddValue(- Mathf.Abs(maxRealValue - minRealValue) / virtualStep);
     }
 
+    public override void OnVolumeChange()
+    {
+        //Реализация для ползунка слайдера
+
+    }
+
     private void AddValue(float value)
     {
         currentValue += value;

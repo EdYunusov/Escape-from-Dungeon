@@ -13,6 +13,8 @@ public class Settings : ScriptableObject
 
     public virtual void SetNextValue() { }
     public virtual void SetPreviousValue() { }
+
+    public virtual void OnVolumeChange() { }
     public virtual object GetValue() { return default(object); }
     public virtual string GetStringValue() { return string.Empty; }
 
