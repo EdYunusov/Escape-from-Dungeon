@@ -18,8 +18,8 @@ public class BattelSystem : MonoBehaviour
 {
     public BattelState state;
 
-    [SerializeField] private GameObject playerPrefab;
-    [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] public GameObject playerPrefab;
+    [SerializeField] public GameObject enemyPrefab;
 
     [SerializeField] private Transform playerSpawnGround;
     [SerializeField] private Transform enemySpawnGround;

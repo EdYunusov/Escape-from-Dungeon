@@ -12,13 +12,15 @@ public class UISettingsButton : UIButtonSelectable, IScriptableObjectProperty
     [SerializeField] private Image nextImage;
     [SerializeField] private Slider slider;
 
+    public Settings Settings => settings;
 
-    private void Start()
+
+    private void Awake()
     {
         ApplayProperty(settings);
     }
 
-    public void SetNextxValueSettings()
+    public void SetNextValueSettings()
     {
         settings?.SetNextValue();
         settings.Apply();

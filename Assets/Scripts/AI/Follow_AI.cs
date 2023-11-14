@@ -80,6 +80,10 @@ public class Follow_AI : MonoBehaviour
     public void EnableBattleScene()
     {
         battleScene.SetActive(true);
+
+        BattelSystem bs = battleScene.GetComponentInChildren<BattelSystem>();
+        bs.playerPrefab = m_Target.gameObject;
+        bs.enemyPrefab = gameObject;
     }
 
 }
