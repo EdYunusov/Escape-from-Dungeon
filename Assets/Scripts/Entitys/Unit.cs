@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
@@ -14,7 +15,9 @@ public class Unit : MonoBehaviour
     [SerializeField] private int healingPower;
 
     [SerializeField] private GameObject battleScene;
+    [SerializeField] private Sprite battleSprite;
 
+    public Sprite BattleSprite => battleSprite;
     public GameObject BattleScene => battleScene;
 
     private Rigidbody2D m_Rig;
@@ -76,6 +79,7 @@ public class Unit : MonoBehaviour
     }
 
     [SerializeField] private UnityEvent m_EventOnDeath;
+
     
 
     protected virtual void OnDeath()
