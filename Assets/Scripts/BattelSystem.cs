@@ -38,7 +38,6 @@ public class BattelSystem : MonoBehaviour
 
     private void Start()
     {
-        Image image = GetComponentInChildren<Image>();
         state = BattelState.Start;
         StartCoroutine(SetupBattle());
     }
