@@ -6,11 +6,12 @@ public class TriggerHidenPath : MonoBehaviour
     [SerializeField] private PlayerController player;
     [SerializeField] private UnityEvent m_Enter;
     [SerializeField] private GameObject keyboard_Messag;
+    [SerializeField] private ShowHiddenPath path;
 
 
     private bool isActive = false;
     private bool m_Reached;
-    private ShowHiddenPath path;
+
 
     public bool Reached => m_Reached;
 

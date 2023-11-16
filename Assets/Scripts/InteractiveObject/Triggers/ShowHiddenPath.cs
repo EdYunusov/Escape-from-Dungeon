@@ -11,12 +11,17 @@ public class ShowHiddenPath : MonoBehaviour
         hiddenPath.SetActive(true);
     }
 
+    private void Update()
+    {
+        KeyPressdCheck();
+    }
+
     public void KeyPressdCheck()
     {
         if (Input.GetKeyDown(KeyCode.E) == true)
         {
             Debug.Log("Key pressed");
-            if ( button.Reached == false)
+            if (button.Reached == false)
             {
                 hiddenPath.SetActive(false);
             }
