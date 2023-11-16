@@ -84,7 +84,6 @@ public class Unit : MonoBehaviour
 
     protected virtual void OnDeath()
     {
-        SceneManager.LoadScene(1);
         m_EventOnDeath?.Invoke();
     }
 }

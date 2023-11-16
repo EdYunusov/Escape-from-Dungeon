@@ -33,8 +33,6 @@ public class BattelSystem : MonoBehaviour
     public BattleGUI playerGUI;
     public BattleGUI enemyGUI;
 
-    private PlayerController playerController;
-
 
     private void Start()
     {

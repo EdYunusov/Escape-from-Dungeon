@@ -43559,7 +43559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788557719463151061, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6788557719463151064, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
       propertyPath: m_RootOrder
@@ -43617,6 +43617,14 @@ PrefabInstance:
       propertyPath: battleScene
       value: 
       objectReference: {fileID: 1142153379}
+    - target: {fileID: 7352739670381796355, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
+      propertyPath: maxHP
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7352739670381796355, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
+      propertyPath: currentHP
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7352739670381796355, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
       propertyPath: battleSprite
       value: 
