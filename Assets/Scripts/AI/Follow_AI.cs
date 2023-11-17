@@ -48,22 +48,24 @@ public class Follow_AI : MonoBehaviour
             float distanceFromPlayer = Vector2.Distance(transform.position, m_Target.position);
             if (distanceFromPlayer < m_MinDist && distanceFromPlayer > m_ShootingRange)
             {
+                animator.SetBool("isMoving", true);
                 transform.position = Vector2.MoveTowards(transform.position, m_Target.position, m_Speed * Time.deltaTime);
             }
             else if (distanceFromPlayer <= m_ShootingRange && m_NextShotTime < Time.time)
             {
-                //сегмент, отвечающий за анимацию???
-                animator.SetBool("isMoving", true);
-                direction.x = distanceFromPlayer; //Ќеправильное значение? Ќужно верно передать значение на direction, но € не понимаю какое именно тут должно быть значение.
-                if (direction.x != 0)
-                {
-                    animator.SetFloat("Horizontal", direction.x);
-                }
 
-                direction.y = distanceFromPlayer; //Ќеправильное значение? Ќужно верно передать значение на direction, но € не понимаю какое именно тут должно быть значение.
-                if (direction.y != 0)
+                Vector3 distToTarget = m_Target.position - transform.position;
+                if(Mathf.Abs(distToTarget.x) > Mathf.Abs(distToTarget.y))
                 {
-                    animator.SetFloat("Vertical", direction.y);
+                    var horizontal = (distToTarget.x > 0) ? 1 : -1;
+                    animator.SetFloat("Horizontal", horizontal);
+
+                }
+                //сегмент, отвечающий за анимацию???
+                else
+                {
+                    var verticale = (distToTarget.y > 0) ? 1 : -1;
+                    animator.SetFloat("Horizontal", verticale);
                 }
 
                 Projectile currentProjectile = Instantiate(m_Projectile, m_ParentProjectile.transform.position, Quaternion.identity);
@@ -77,22 +79,24 @@ public class Follow_AI : MonoBehaviour
             float distanceFromPlayer = Vector2.Distance(transform.position, m_Target.position);
             if (distanceFromPlayer < m_MinDist && distanceFromPlayer > m_MeleeTriggerRange)
             {
+                animator.SetBool("isMoving", true);
                 transform.position = Vector2.MoveTowards(transform.position, m_Target.position, m_Speed * Time.deltaTime);
             }
             else if (distanceFromPlayer <= m_MeleeTriggerRange)
             {
-                //сегмент, отвечающий за анимацию???
-                animator.SetBool("isMoving", true);
-                direction.x = Input.GetAxisRaw("Horizontal");
-                if (direction.x != 0)
+                
+                Vector3 distToTarget = m_Target.position - transform.position;
+                if (Mathf.Abs(distToTarget.x) > Mathf.Abs(distToTarget.y))
                 {
-                    animator.SetFloat("Horizontal", direction.x);
-                }
+                    var horizontal = (distToTarget.x > 0) ? 1 : -1;
+                    animator.SetFloat("Horizontal", horizontal);
 
-                direction.y = Input.GetAxisRaw("Vertical");
-                if (direction.y != 0)
+                }
+                //сегмент, отвечающий за анимацию???
+                else
                 {
-                    animator.SetFloat("Vertical", direction.y);
+                    var verticale = (distToTarget.y > 0) ? 1 : -1;
+                    animator.SetFloat("Horizontal", verticale);
                 }
                 EnableBattleScene();
             }
