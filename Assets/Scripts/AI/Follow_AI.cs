@@ -45,29 +45,27 @@ public class Follow_AI : MonoBehaviour
     {
         if (enemyType == EnemyType.Range_Type)
         {
-            float distanceFromPlayer = Vector2.Distance(transform.position, m_Target.position);
-            if (distanceFromPlayer < m_MinDist && distanceFromPlayer > m_ShootingRange)
+            Vector3 distToTarget = m_Target.position - transform.position;
+            if (Mathf.Abs(distToTarget.x) > Mathf.Abs(distToTarget.y))
+            {
+                var horizontal = (distToTarget.x > 0) ? 1 : -1;
+                animator.SetFloat("Horizontal", horizontal);
+
+            }
+            //сегмент, отвечающий за анимацию???
+            else
+            {
+                var verticale = (distToTarget.y > 0) ? 1 : -1;
+                animator.SetFloat("Horizontal", verticale);
+            }
+
+            if (distToTarget.magnitude < m_MinDist && distToTarget.magnitude > m_ShootingRange)
             {
                 animator.SetBool("isMoving", true);
                 transform.position = Vector2.MoveTowards(transform.position, m_Target.position, m_Speed * Time.deltaTime);
             }
-            else if (distanceFromPlayer <= m_ShootingRange && m_NextShotTime < Time.time)
+            else if (distToTarget.magnitude <= m_ShootingRange && m_NextShotTime < Time.time)
             {
-
-                Vector3 distToTarget = m_Target.position - transform.position;
-                if(Mathf.Abs(distToTarget.x) > Mathf.Abs(distToTarget.y))
-                {
-                    var horizontal = (distToTarget.x > 0) ? 1 : -1;
-                    animator.SetFloat("Horizontal", horizontal);
-
-                }
-                //сегмент, отвечающий за анимацию???
-                else
-                {
-                    var verticale = (distToTarget.y > 0) ? 1 : -1;
-                    animator.SetFloat("Horizontal", verticale);
-                }
-
                 Projectile currentProjectile = Instantiate(m_Projectile, m_ParentProjectile.transform.position, Quaternion.identity);
                 m_NextShotTime = Time.time + m_FireRate;
                 currentProjectile.SetFollow_AI(this);
@@ -76,28 +74,26 @@ public class Follow_AI : MonoBehaviour
 
         if (enemyType == EnemyType.Melee_Type)
         {
-            float distanceFromPlayer = Vector2.Distance(transform.position, m_Target.position);
-            if (distanceFromPlayer < m_MinDist && distanceFromPlayer > m_MeleeTriggerRange)
+            Vector3 distToTarget = m_Target.position - transform.position;
+            if (Mathf.Abs(distToTarget.x) > Mathf.Abs(distToTarget.y))
+            {
+                var horizontal = (distToTarget.x > 0) ? 1 : -1;
+                animator.SetFloat("Horizontal", horizontal);
+
+            }
+            //сегмент, отвечающий за анимацию???
+            else
+            {
+                var verticale = (distToTarget.y > 0) ? 1 : -1;
+                animator.SetFloat("Horizontal", verticale);
+            }
+            if (distToTarget.magnitude < m_MinDist && distToTarget.magnitude > m_MeleeTriggerRange)
             {
                 animator.SetBool("isMoving", true);
                 transform.position = Vector2.MoveTowards(transform.position, m_Target.position, m_Speed * Time.deltaTime);
             }
-            else if (distanceFromPlayer <= m_MeleeTriggerRange)
+            else if (distToTarget.magnitude <= m_MeleeTriggerRange)
             {
-                
-                Vector3 distToTarget = m_Target.position - transform.position;
-                if (Mathf.Abs(distToTarget.x) > Mathf.Abs(distToTarget.y))
-                {
-                    var horizontal = (distToTarget.x > 0) ? 1 : -1;
-                    animator.SetFloat("Horizontal", horizontal);
-
-                }
-                //сегмент, отвечающий за анимацию???
-                else
-                {
-                    var verticale = (distToTarget.y > 0) ? 1 : -1;
-                    animator.SetFloat("Horizontal", verticale);
-                }
                 EnableBattleScene();
             }
         }
