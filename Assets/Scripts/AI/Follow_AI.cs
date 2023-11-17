@@ -54,13 +54,13 @@ public class Follow_AI : MonoBehaviour
             {
                 //сегмент, отвечающий за анимацию???
                 animator.SetBool("isMoving", true);
-                direction.x = distanceFromPlayer;
+                direction.x = distanceFromPlayer; //Ќеправильное значение? Ќужно верно передать значение на direction, но € не понимаю какое именно тут должно быть значение.
                 if (direction.x != 0)
                 {
                     animator.SetFloat("Horizontal", direction.x);
                 }
 
-                direction.y = distanceFromPlayer;
+                direction.y = distanceFromPlayer; //Ќеправильное значение? Ќужно верно передать значение на direction, но € не понимаю какое именно тут должно быть значение.
                 if (direction.y != 0)
                 {
                     animator.SetFloat("Vertical", direction.y);
