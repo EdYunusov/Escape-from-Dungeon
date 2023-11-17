@@ -34,7 +34,7 @@ public class Follow_AI : MonoBehaviour
     public GameObject BattleScene => battleScene;
 
     private Vector2 direction;
-
+    private bool isMoving;
 
     private void Start()
     {
@@ -52,6 +52,20 @@ public class Follow_AI : MonoBehaviour
             }
             else if (distanceFromPlayer <= m_ShootingRange && m_NextShotTime < Time.time)
             {
+                //сегмент, отвечающий за анимацию???
+                animator.SetBool("isMoving", true);
+                direction.x = Input.GetAxisRaw("Horizontal");
+                if (direction.x != 0)
+                {
+                    animator.SetFloat("Horizontal", direction.x);
+                }
+
+                direction.y = Input.GetAxisRaw("Vertical");
+                if (direction.y != 0)
+                {
+                    animator.SetFloat("Vertical", direction.y);
+                }
+
                 Projectile currentProjectile = Instantiate(m_Projectile, m_ParentProjectile.transform.position, Quaternion.identity);
                 m_NextShotTime = Time.time + m_FireRate;
                 currentProjectile.SetFollow_AI(this);
@@ -67,25 +81,27 @@ public class Follow_AI : MonoBehaviour
             }
             else if (distanceFromPlayer <= m_MeleeTriggerRange)
             {
+                //сегмент, отвечающий за анимацию???
+                animator.SetBool("isMoving", true);
+                direction.x = Input.GetAxisRaw("Horizontal");
+                if (direction.x != 0)
+                {
+                    animator.SetFloat("Horizontal", direction.x);
+                }
+
+                direction.y = Input.GetAxisRaw("Vertical");
+                if (direction.y != 0)
+                {
+                    animator.SetFloat("Vertical", direction.y);
+                }
                 EnableBattleScene();
             }
         }
 
-        //сегмент, отвечающий за анимацию???
-        direction.x = Input.GetAxisRaw("Horizontal");
         
-        direction.y = Input.GetAxisRaw("Vertical");
         
 
-        if (direction.x != 0)
-        {
-            animator.SetFloat("Horizontal", direction.x);
-        }
-
-        if (direction.y != 0)
-        {
-            animator.SetFloat("Vertical", direction.y);
-        }
+        
     }
 
     private void OnDrawGizmosSelected()
