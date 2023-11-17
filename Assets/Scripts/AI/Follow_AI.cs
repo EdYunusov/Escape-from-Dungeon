@@ -54,13 +54,13 @@ public class Follow_AI : MonoBehaviour
             {
                 //сегмент, отвечающий за анимацию???
                 animator.SetBool("isMoving", true);
-                direction.x = Input.GetAxisRaw("Horizontal");
+                direction.x = distanceFromPlayer;
                 if (direction.x != 0)
                 {
                     animator.SetFloat("Horizontal", direction.x);
                 }
 
-                direction.y = Input.GetAxisRaw("Vertical");
+                direction.y = distanceFromPlayer;
                 if (direction.y != 0)
                 {
                     animator.SetFloat("Vertical", direction.y);
