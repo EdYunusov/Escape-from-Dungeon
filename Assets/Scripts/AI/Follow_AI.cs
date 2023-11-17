@@ -21,7 +21,8 @@ public class Follow_AI : MonoBehaviour
     [SerializeField] private float m_MinDist;
     [SerializeField] private float m_ShootingRange;
     [SerializeField] private float m_MeleeTriggerRange;
-    
+    [SerializeField] private Animator animator;
+
     [Header("Projectile and shooting system settings")]
     [SerializeField] private Projectile m_Projectile;
     [SerializeField] private GameObject m_ParentProjectile;
@@ -31,6 +32,8 @@ public class Follow_AI : MonoBehaviour
     [SerializeField] private GameObject battleScene;
 
     public GameObject BattleScene => battleScene;
+
+    private Vector2 direction;
 
 
     private void Start()
@@ -67,7 +70,22 @@ public class Follow_AI : MonoBehaviour
                 EnableBattleScene();
             }
         }
+
+        //сегмент, отвечающий за анимацию???
+        direction.x = Input.GetAxisRaw("Horizontal");
         
+        direction.y = Input.GetAxisRaw("Vertical");
+        
+
+        if (direction.x != 0)
+        {
+            animator.SetFloat("Horizontal", direction.x);
+        }
+
+        if (direction.y != 0)
+        {
+            animator.SetFloat("Vertical", direction.y);
+        }
     }
 
     private void OnDrawGizmosSelected()
