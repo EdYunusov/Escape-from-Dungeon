@@ -85,8 +85,9 @@ public class Follow_AI : MonoBehaviour
             else
             {
                 var verticale = (distToTarget.y > 0) ? 1 : -1;
-                animator.SetFloat("Horizontal", verticale);
+                animator.SetFloat("Vertical", verticale);
             }
+
             if (distToTarget.magnitude < m_MinDist && distToTarget.magnitude > m_MeleeTriggerRange)
             {
                 animator.SetBool("isMoving", true);
@@ -97,11 +98,6 @@ public class Follow_AI : MonoBehaviour
                 EnableBattleScene();
             }
         }
-
-        
-        
-
-        
     }
 
     private void OnDrawGizmosSelected()

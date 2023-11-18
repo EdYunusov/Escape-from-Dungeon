@@ -9,10 +9,13 @@ public class BattleGUI : MonoBehaviour
 
     [SerializeField] private Slider HPSlider;
 
+    [SerializeField] private Image image;
+
     //[SerializeField] private Text levelText;
 
     public void SetGUI(Unit unit)
     {
+        image.sprite = unit.BattleIconeSprite;
         nameText.text = unit.Nickname;
         HPSlider.maxValue = unit.MaxHP;
         HPSlider.value = unit.CurrentHP;

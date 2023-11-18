@@ -47,11 +47,15 @@ public class BattelSystem : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
+        
         GameObject playerGO = Instantiate(playerPrefab, playerSpawnGround);
         playerUnit = playerGO.GetComponent<Unit>();
 
         GameObject enemyGO = Instantiate(enemyPrefab, enemySpawnGround);
         enemyUnit = enemyGO.GetComponent<Unit>();
+
+        playerGUI.SetGUI(playerUnit);
+        enemyGUI.SetGUI(enemyUnit);
 
         playerSpawnGround.GetComponentInChildren<Image>().sprite = playerUnit.BattleSprite;
         enemySpawnGround.GetComponentInChildren<Image>().sprite = enemyUnit.BattleSprite;

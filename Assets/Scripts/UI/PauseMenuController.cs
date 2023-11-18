@@ -10,14 +10,14 @@ namespace Maze2Dgame
         private void Start()
         {
             gameObject.SetActive(false);
-            Debug.Log("Menu off");
+            //Debug.Log("Menu off");
         }
 
         public void OnButtonShowPause()
         {
             gameObject.SetActive(true);
             Time.timeScale = 0;
-            Debug.Log("CLICK! Menu ON!");
+            //Debug.Log("CLICK! Menu ON!");
         }
 
         public void OnContinueButton()

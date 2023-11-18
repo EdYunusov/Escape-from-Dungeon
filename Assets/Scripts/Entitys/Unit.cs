@@ -16,20 +16,20 @@ public class Unit : MonoBehaviour
 
     [SerializeField] private GameObject battleScene;
     [SerializeField] private Sprite battleSprite;
+    [SerializeField] private Sprite battleIconeSprite;
 
     public Sprite BattleSprite => battleSprite;
     public GameObject BattleScene => battleScene;
-
-    private Rigidbody2D m_Rig;
-    public bool isProtected { get; set; }
-
+    public Sprite BattleIconeSprite => battleIconeSprite;
     public string Nickname => nickname;
     public int CurrentHP => currentHP;
     public int PhysDamage => physDamage;
     public int MagicDamage => magicDamage;
     public int HealingPower => healingPower;
     public int MaxHP => maxHP;
+    public bool isProtected { get; set; }
 
+    private Rigidbody2D m_Rig;
 
     public bool TakePhysicAttackDamage(int dmg)
     {
