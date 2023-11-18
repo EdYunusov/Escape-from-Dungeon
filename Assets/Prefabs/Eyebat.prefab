@@ -21,7 +21,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6788557719463151064
 Transform:
   m_ObjectHideFlags: 0
@@ -143,12 +143,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1a4a944e6de03f419492f2ba974340f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyType: 0
+  enemyType: 1
   m_Speed: 1
   m_Target: {fileID: 0}
   m_MinDist: 6
   m_ShootingRange: 4
   m_MeleeTriggerRange: 0.5
+  animator: {fileID: 0}
   m_Projectile: {fileID: 7487342064825449798, guid: 9277af0e584ffbd4d86cf3bfbf227d56, type: 3}
   m_ParentProjectile: {fileID: 6788557719581322533}
   m_FireRate: 2
@@ -183,11 +184,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nickname: Bat
-  maxHP: 100
-  currentHP: 100
+  maxHP: 10
+  currentHP: 10
   physDamage: 10
   magicDamage: 0
   healingPower: 0
+  battleScene: {fileID: 0}
+  battleSprite: {fileID: 21300000, guid: b466899642e0c2c48bba99caceccfea1, type: 3}
+  battleIconeSprite: {fileID: 0}
   m_EventOnDeath:
     m_PersistentCalls:
       m_Calls:

@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46deb7191ca95774099067c4f58b44fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nickname: Bat
+  nickname: Skeleton
   maxHP: 10
   currentHP: 10
   physDamage: 10
@@ -191,6 +191,7 @@ MonoBehaviour:
   healingPower: 0
   battleScene: {fileID: 0}
   battleSprite: {fileID: -2109306100, guid: 8cd575f01fbfa184282780fe2393e603, type: 3}
+  battleIconeSprite: {fileID: 21300000, guid: 27373b6c0ff991f42a478195dc89e6d0, type: 3}
   m_EventOnDeath:
     m_PersistentCalls:
       m_Calls:
