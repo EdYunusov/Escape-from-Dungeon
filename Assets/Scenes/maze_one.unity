@@ -43277,6 +43277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Eyebat
       objectReference: {fileID: 0}
+    - target: {fileID: 6788557719463151061, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6788557719463151064, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -57840,7 +57844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2594269714794879268, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2594269714794879273, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
       propertyPath: m_RootOrder
