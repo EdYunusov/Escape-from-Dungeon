@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class ShowHiddenPath : MonoBehaviour
 {
     [SerializeField] private TriggerHidenPath button;
     [SerializeField] private GameObject hiddenPath;
+    [SerializeField] private AudioSource audio;
+
     private void Start()
     {
         hiddenPath.SetActive(true);
@@ -24,6 +27,7 @@ public class ShowHiddenPath : MonoBehaviour
             if (button.Reached == false)
             {
                 hiddenPath.SetActive(false);
+                audio.Play();
             }
         }
     }

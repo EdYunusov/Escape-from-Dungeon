@@ -57765,6 +57765,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2040031193 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4835152055407249513, guid: a8305657d49ccff40a58b55869995c9d, type: 3}
+  m_PrefabInstance: {fileID: 9060238929679000840}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &189654991339912540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57833,6 +57838,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: skeleton
       objectReference: {fileID: 0}
+    - target: {fileID: 2594269714794879268, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2594269714794879273, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -57882,14 +57891,47 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 907438044}
     - target: {fileID: 2594269714794879279, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: enemyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594269714794879279, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
       propertyPath: battleScene
       value: 
       objectReference: {fileID: 1142153379}
+    - target: {fileID: 2594269714794879279, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: detectedAlert
+      value: 
+      objectReference: {fileID: 3525983597637672801}
+    - target: {fileID: 2594269714794879279, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: m_MeleeTriggerRange
+      value: 1.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3330674446385673302, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6208533135293028804, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a7db6ae085235448960de9851fba8df, type: 3}
+    - target: {fileID: 6208533135293028804, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6208533135293028804, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -4793431200745234461, guid: 15b4613d3d726fd489cd75ed71101a8f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
 --- !u!4 &3525983597637672794 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2594269714794879273, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+  m_PrefabInstance: {fileID: 1508281365113276019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &3525983597637672801 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6208533135293028804, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
   m_PrefabInstance: {fileID: 1508281365113276019}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3722453545437356938
@@ -58022,13 +58064,33 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1809777789, guid: a8305657d49ccff40a58b55869995c9d, type: 3}
+      propertyPath: path
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809777789, guid: a8305657d49ccff40a58b55869995c9d, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 907438047}
     - target: {fileID: 1809777790, guid: a8305657d49ccff40a58b55869995c9d, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 2040031193}
+    - target: {fileID: 1809777790, guid: a8305657d49ccff40a58b55869995c9d, type: 3}
       propertyPath: hiddenPath
       value: 
       objectReference: {fileID: 1844922395}
+    - target: {fileID: 4835152055407249513, guid: a8305657d49ccff40a58b55869995c9d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 386fc8a8d7bef3c4eb819317b7584f56, type: 3}
+    - target: {fileID: 4835152055407249513, guid: a8305657d49ccff40a58b55869995c9d, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835152055407249513, guid: a8305657d49ccff40a58b55869995c9d, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -4793431200745234461, guid: 15b4613d3d726fd489cd75ed71101a8f, type: 2}
     - target: {fileID: 9060238929738779147, guid: a8305657d49ccff40a58b55869995c9d, type: 3}
       propertyPath: m_MessagBox
       value: 

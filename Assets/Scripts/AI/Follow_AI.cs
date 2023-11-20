@@ -9,7 +9,7 @@ public enum EnemyType
     Range_Type
 }
 
-
+[RequireComponent(typeof(AudioSource))]
 public class Follow_AI : MonoBehaviour
 {
     public EnemyType enemyType;
@@ -28,13 +28,12 @@ public class Follow_AI : MonoBehaviour
     [SerializeField] private GameObject m_ParentProjectile;
     [SerializeField] private float m_FireRate;
     [SerializeField] private float m_NextShotTime;
-
     [SerializeField] private GameObject battleScene;
 
-    public GameObject BattleScene => battleScene;
+    [Header("Audio Settings")]
+    [SerializeField] private AudioSource detectedAlert;
 
-    private Vector2 direction;
-    private bool isMoving;
+    public GameObject BattleScene => battleScene;
 
     private void Start()
     {
@@ -61,6 +60,7 @@ public class Follow_AI : MonoBehaviour
 
             if (distToTarget.magnitude < m_MinDist && distToTarget.magnitude > m_ShootingRange)
             {
+                detectedAlert.Play();
                 animator.SetBool("isMoving", true);
                 transform.position = Vector2.MoveTowards(transform.position, m_Target.position, m_Speed * Time.deltaTime);
             }
@@ -79,7 +79,6 @@ public class Follow_AI : MonoBehaviour
             {
                 var horizontal = (distToTarget.x > 0) ? 1 : -1;
                 animator.SetFloat("Horizontal", horizontal);
-
             }
             //сегмент, отвечающий за анимацию???
             else
@@ -90,6 +89,7 @@ public class Follow_AI : MonoBehaviour
 
             if (distToTarget.magnitude < m_MinDist && distToTarget.magnitude > m_MeleeTriggerRange)
             {
+                detectedAlert.Play();
                 animator.SetBool("isMoving", true);
                 transform.position = Vector2.MoveTowards(transform.position, m_Target.position, m_Speed * Time.deltaTime);
             }
