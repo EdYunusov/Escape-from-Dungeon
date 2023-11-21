@@ -5,9 +5,11 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
+[RequireComponent(typeof(AudioSource))]
 public class UIButtonSelectable : UIButton
 {
     [SerializeField] private Image selectImage;
+    [SerializeField] private AudioSource audio;
 
     public UnityEvent OnSelect;
     public UnityEvent OnUnselect;
@@ -21,7 +23,7 @@ public class UIButtonSelectable : UIButton
     {
         base.SetFocuse();
 
-
+        audio.Play();
         selectImage.enabled = true;
 
         OnSelect?.Invoke();

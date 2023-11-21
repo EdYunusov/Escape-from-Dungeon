@@ -153,8 +153,8 @@ MonoBehaviour:
   animator: {fileID: 6788557719463151069}
   m_Projectile: {fileID: 7487342064825449798, guid: 9277af0e584ffbd4d86cf3bfbf227d56, type: 3}
   m_ParentProjectile: {fileID: 6788557719581322533}
-  m_FireRate: 2
-  m_NextShotTime: 1
+  m_FireRate: 1
+  m_NextShotTime: 2
   battleScene: {fileID: 0}
   detectedAlert: {fileID: 1783671379342113972}
 --- !u!58 &6056656554264406183
