@@ -73,14 +73,13 @@ public class Unit : MonoBehaviour
         return physDamage;
     }
 
-    public void PlayerEscape()
+
+    public void UnitDead()
     {
-        battleScene.SetActive(false);
+        Destroy(this.gameObject);
     }
 
     [SerializeField] private UnityEvent m_EventOnDeath;
-
-    
 
     protected virtual void OnDeath()
     {
