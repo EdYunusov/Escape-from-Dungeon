@@ -156,7 +156,7 @@ MonoBehaviour:
   m_FireRate: 2
   m_NextShotTime: 1
   battleScene: {fileID: 0}
-  detectedAlert: {fileID: 0}
+  detectedAlert: {fileID: 6208533135293028804}
 --- !u!58 &3330674446385673302
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -186,8 +186,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nickname: Skeleton
-  maxHP: 10
-  currentHP: 10
+  maxHP: 100
+  currentHP: 100
   physDamage: 10
   magicDamage: 0
   healingPower: 0

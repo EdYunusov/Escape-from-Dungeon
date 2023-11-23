@@ -120221,6 +120221,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0fd676493f6ac240a274482aa45bdbc, type: 3}
+--- !u!1 &1280568735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3722453545346294218, guid: b0fd676493f6ac240a274482aa45bdbc, type: 3}
+  m_PrefabInstance: {fileID: 1280568734}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1338147235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -120355,6 +120360,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9061975918069269840, guid: 1129866ee8a58654d912b4d4941d0caa, type: 3}
+      propertyPath: levelSound
+      value: 
+      objectReference: {fileID: 1280568735}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1129866ee8a58654d912b4d4941d0caa, type: 3}
 --- !u!1 &1711825912 stripped

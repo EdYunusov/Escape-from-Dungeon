@@ -43,10 +43,6 @@ public class BattelSystem : MonoBehaviour
         StartCoroutine(SetupBattle());
     }
 
-    private void PlayerTurn()
-    {
-        //поместить тут ход игрока
-    }
 
     IEnumerator SetupBattle()
     {
@@ -69,7 +65,6 @@ public class BattelSystem : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         state = BattelState.PlayerTurn;
-        PlayerTurn();
     }
 
     IEnumerator PlayerAttack()
@@ -160,7 +155,6 @@ public class BattelSystem : MonoBehaviour
         else
         {
             state = BattelState.PlayerTurn;
-            PlayerTurn();
         }
     }
 
