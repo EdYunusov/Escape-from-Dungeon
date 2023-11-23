@@ -100028,6 +100028,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 627410782}
     m_Modifications:
+    - target: {fileID: 2035435780422680818, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: battleScene
+      value: 
+      objectReference: {fileID: 1711825912}
     - target: {fileID: 2594269714794879268, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
       propertyPath: m_Name
       value: Skeliton
@@ -100076,6 +100080,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2594269714794879279, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 2105196214}
+    - target: {fileID: 2594269714794879279, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: battleScene
+      value: 
+      objectReference: {fileID: 1711825912}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
 --- !u!4 &319697826 stripped
@@ -100297,6 +100309,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6788557719463151070, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 2105196214}
+    - target: {fileID: 6788557719463151070, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
+      propertyPath: battleScene
+      value: 
+      objectReference: {fileID: 1711825912}
+    - target: {fileID: 7352739670381796355, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
+      propertyPath: battleScene
+      value: 
+      objectReference: {fileID: 1711825912}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
 --- !u!4 &758905307 stripped
@@ -100359,6 +100383,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6788557719463151070, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 2105196214}
+    - target: {fileID: 6788557719463151070, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
+      propertyPath: battleScene
+      value: 
+      objectReference: {fileID: 1711825912}
+    - target: {fileID: 7352739670381796355, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
+      propertyPath: battleScene
+      value: 
+      objectReference: {fileID: 1711825912}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
 --- !u!4 &766717072 stripped
@@ -100373,6 +100409,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 627410782}
     m_Modifications:
+    - target: {fileID: 2035435780422680818, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: battleScene
+      value: 
+      objectReference: {fileID: 1711825912}
     - target: {fileID: 2594269714794879268, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
       propertyPath: m_Name
       value: Skeliton (3)
@@ -100421,6 +100461,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2594269714794879279, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 2105196214}
+    - target: {fileID: 2594269714794879279, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: battleScene
+      value: 
+      objectReference: {fileID: 1711825912}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
 --- !u!4 &793946635 stripped
@@ -102995,6 +103043,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 627410782}
     m_Modifications:
+    - target: {fileID: 2035435780422680818, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: battleScene
+      value: 
+      objectReference: {fileID: 1711825912}
     - target: {fileID: 2594269714794879268, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
       propertyPath: m_Name
       value: Skeliton (1)
@@ -103043,6 +103095,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2594269714794879279, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 2105196214}
+    - target: {fileID: 2594269714794879279, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: battleScene
+      value: 
+      objectReference: {fileID: 1711825912}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
 --- !u!4 &1109678740 stripped
@@ -103057,6 +103117,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 627410782}
     m_Modifications:
+    - target: {fileID: 2035435780422680818, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: battleScene
+      value: 
+      objectReference: {fileID: 1711825912}
     - target: {fileID: 2594269714794879268, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
       propertyPath: m_Name
       value: Skeliton (4)
@@ -103105,6 +103169,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2594269714794879279, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 2105196214}
+    - target: {fileID: 2594269714794879279, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: battleScene
+      value: 
+      objectReference: {fileID: 1711825912}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
 --- !u!4 &1112292024 stripped
@@ -120204,6 +120276,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6788557719463151070, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 2105196214}
+    - target: {fileID: 6788557719463151070, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
+      propertyPath: battleScene
+      value: 
+      objectReference: {fileID: 1711825912}
+    - target: {fileID: 7352739670381796355, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
+      propertyPath: battleScene
+      value: 
+      objectReference: {fileID: 1711825912}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6148fb4b903bbd34f97ae1b79a82ffac, type: 3}
 --- !u!4 &1338147236 stripped
@@ -120273,6 +120357,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1129866ee8a58654d912b4d4941d0caa, type: 3}
+--- !u!1 &1711825912 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9061975917723642094, guid: 1129866ee8a58654d912b4d4941d0caa, type: 3}
+  m_PrefabInstance: {fileID: 1711825911}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1730443617
 GameObject:
   m_ObjectHideFlags: 0
@@ -121112,6 +121201,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 627410782}
     m_Modifications:
+    - target: {fileID: 2035435780422680818, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: battleScene
+      value: 
+      objectReference: {fileID: 1711825912}
     - target: {fileID: 2594269714794879268, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
       propertyPath: m_Name
       value: Skeliton (5)
@@ -121160,6 +121253,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2594269714794879279, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 2105196214}
+    - target: {fileID: 2594269714794879279, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: battleScene
+      value: 
+      objectReference: {fileID: 1711825912}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
 --- !u!4 &1982837030 stripped
@@ -121256,6 +121357,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a942991688fd8c64bb619a82db3e237a, type: 3}
+--- !u!4 &2105196214 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8697418185869824013, guid: a942991688fd8c64bb619a82db3e237a, type: 3}
+  m_PrefabInstance: {fileID: 2105196213}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2105196215 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 233305050, guid: a942991688fd8c64bb619a82db3e237a, type: 3}
@@ -121274,6 +121380,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 627410782}
     m_Modifications:
+    - target: {fileID: 2035435780422680818, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: battleScene
+      value: 
+      objectReference: {fileID: 1711825912}
     - target: {fileID: 2594269714794879268, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
       propertyPath: m_Name
       value: Skeliton (2)
@@ -121322,6 +121432,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2594269714794879279, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 2105196214}
+    - target: {fileID: 2594269714794879279, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
+      propertyPath: battleScene
+      value: 
+      objectReference: {fileID: 1711825912}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f9a7eb6df6dd3245a91985e0350924a, type: 3}
 --- !u!4 &2114092578 stripped

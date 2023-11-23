@@ -15,6 +15,7 @@ public enum BattelState
     Lose
 }
 
+[RequireComponent(typeof(AudioSource))]
 public class BattelSystem : MonoBehaviour
 {
     public BattelState state;
@@ -26,6 +27,8 @@ public class BattelSystem : MonoBehaviour
     [SerializeField] private Transform enemySpawnGround;
 
     [SerializeField] private GameObject battelScene;
+    [SerializeField] private AudioSource battleTheme;
+    [SerializeField] private GameObject levelSound;
 
     private Unit playerUnit;
     private Unit enemyUnit;
@@ -47,12 +50,14 @@ public class BattelSystem : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
-        
+        levelSound.SetActive(false);
+        battleTheme.Play();
+
         GameObject playerGO = Instantiate(playerPrefab, playerSpawnGround);
-        playerUnit = playerGO.GetComponent<Unit>();
+        playerUnit = playerPrefab.GetComponent<Unit>();
 
         GameObject enemyGO = Instantiate(enemyPrefab, enemySpawnGround);
-        enemyUnit = enemyGO.GetComponent<Unit>();
+        enemyUnit = enemyPrefab.GetComponent<Unit>();
 
         playerGUI.SetGUI(playerUnit);
         enemyGUI.SetGUI(enemyUnit);
@@ -162,6 +167,9 @@ public class BattelSystem : MonoBehaviour
 
     private void EndBattle()
     {
+        battleTheme.Stop();
+        levelSound.SetActive(true);
+
         if (state == BattelState.Won)
         {
             battelScene.SetActive(false);
@@ -170,6 +178,7 @@ public class BattelSystem : MonoBehaviour
 
         if (state == BattelState.Lose)
         {
+            SceneManager.LoadScene(2);
             //обновление инттерфейса и выход из боя/перезагрузка к чекпоинту (?)
         }
     }
@@ -201,5 +210,4 @@ public class BattelSystem : MonoBehaviour
 
         StartCoroutine(PlayerDefence());
     }
-
 }
