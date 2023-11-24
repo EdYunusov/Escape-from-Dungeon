@@ -99,7 +99,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2594269714794879268}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Speed: 1
   m_Target: {fileID: 0}
   m_MinDist: 6
-  m_ShootingRange: 4
-  m_MeleeTriggerRange: 0.5
+  m_ShootingRange: 0
+  m_MeleeTriggerRange: 1.7
   animator: {fileID: 2594269714794879276}
   m_Projectile: {fileID: 7487342064825449798, guid: 9277af0e584ffbd4d86cf3bfbf227d56, type: 3}
   m_ParentProjectile: {fileID: 2594269715179254228}
@@ -170,7 +170,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.14465904}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.17349052
 --- !u!114 &2035435780422680818
@@ -186,8 +186,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nickname: Skeleton
-  maxHP: 100
-  currentHP: 100
+  maxHP: 30
+  currentHP: 30
   physDamage: 10
   magicDamage: 0
   healingPower: 0

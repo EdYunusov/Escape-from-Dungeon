@@ -89,6 +89,7 @@ public class Follow_AI : MonoBehaviour
 
             if (distToTarget.magnitude < m_MinDist && distToTarget.magnitude > m_MeleeTriggerRange)
             {
+                Debug.Log("sound play");
                 detectedAlert.Play();
                 animator.SetBool("isMoving", true);
                 transform.position = Vector2.MoveTowards(transform.position, m_Target.position, m_Speed * Time.deltaTime);
@@ -105,6 +106,7 @@ public class Follow_AI : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, m_MinDist);
         Gizmos.DrawWireSphere(transform.position, m_ShootingRange);
+        Gizmos.DrawWireSphere(transform.position, m_MeleeTriggerRange);
     }
 
     public void EnableBattleScene()
@@ -114,6 +116,8 @@ public class Follow_AI : MonoBehaviour
         BattelSystem bs = battleScene.GetComponentInChildren<BattelSystem>();
         bs.playerPrefab = m_Target.gameObject;
         bs.enemyPrefab = gameObject;
+        
+        StartCoroutine(bs.SetupBattle());
     }
 
 }

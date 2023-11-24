@@ -27,8 +27,9 @@ public class BattelSystem : MonoBehaviour
     [SerializeField] private Transform enemySpawnGround;
 
     [SerializeField] private GameObject battelScene;
-    [SerializeField] private AudioSource battleTheme;
+    //[SerializeField] private GameObject magicButton;
     [SerializeField] private GameObject levelSound;
+    [SerializeField] private AudioSource battleTheme;
 
     private Unit playerUnit;
     private Unit enemyUnit;
@@ -40,12 +41,14 @@ public class BattelSystem : MonoBehaviour
     private void Start()
     {
         state = BattelState.Start;
-        StartCoroutine(SetupBattle());
+
+        Debug.Log("battle started!");
     }
 
 
-    IEnumerator SetupBattle()
+    public IEnumerator SetupBattle()
     {
+
         levelSound.SetActive(false);
         battleTheme.Play();
 
@@ -172,7 +175,7 @@ public class BattelSystem : MonoBehaviour
 
         if (state == BattelState.Lose)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(1);
             //обновление инттерфейса и выход из боя/перезагрузка к чекпоинту (?)
         }
     }
