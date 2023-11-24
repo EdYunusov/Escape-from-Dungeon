@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Target: {fileID: 0}
   m_MinDist: 6
   m_ShootingRange: 4
-  m_MeleeTriggerRange: 0.5
+  m_MeleeTriggerRange: 0
   animator: {fileID: 6788557719463151069}
   m_Projectile: {fileID: 7487342064825449798, guid: 9277af0e584ffbd4d86cf3bfbf227d56, type: 3}
   m_ParentProjectile: {fileID: 6788557719581322533}
